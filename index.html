@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en data-theme="light">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,9 @@
             colors: {
               clifford: "#da373d",
               "bike-primary": "#E76F51",
-              "second-section": "#1E1E1E",    
+              "second-section": "#1E1E1E", 
+              "btn-main": "#ABEF5F",   
+              "btn-second": "#rgb(30, 30, 30)",   
             },
           },
         },
@@ -74,15 +76,27 @@
             <ul
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li><a>Item 3</a></li>
+              <li class="font-bold"><a>Home</a></li>
+              <li><a>Service</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>ContactUs</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">daisyUI</a>
+          <!-- <a class=" text-3xl font-bold "> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="size-8 inline-block bg-btn-main rounded-full -rotate-45  ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>Rinterio</a> -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="size-8 inline-block bg-btn-main rounded-full -rotate-45  ">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg>
+
+          <a class=" text-3xl font-bold ml-3 ">Rinterio</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
+            <li class="font-bold"><a>Home</a></li>
             <li><a>Service</a></li>
             <li><a>Portfolio</a></li>
             <li><a>Blogs</a></li>
@@ -90,11 +104,12 @@
           </ul>
         </div>
         <div class="navbar-end">
-        <div class="dropdown">
-          <button class="btn btn-ghost btn-circle">
+        <div class="dropdown flex items-center gap-6">
+
+           <!-- Search Option  -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor">
@@ -104,8 +119,25 @@
                 stroke-width="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-          </button>
-          <a class="btn">Button</a>
+            <!-- Indicator -->
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 rounded-full"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+          
+          <!-- Booked Consult  -->
+          <button class="bg-btn-main text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">Book Consult <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="size-6 inline-block bg-black text-white rounded-full -rotate-45 ml-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+          </svg></button>
          
         </div>
         </div>
@@ -117,7 +149,7 @@
           <h2 class="text-5xl font-bold">A barn house of this design has a <br> striking appearance</h2>
           <p>The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal  accents, and large windows that flood .</p>
           <div class=" ">
-            <button class="bg-yellow-400 text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">View Profile <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-green-400 rounded-full -rotate-45 ml-1 ">
+            <button class="bg-btn-main text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">View Profile <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-green-400 rounded-full -rotate-45 ml-1 ">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg></button>
             <!-- <div class="flex bg-yellow-400 text-black text-center rounded-3xl gap-2 font-bold">
@@ -132,18 +164,21 @@
        </section> 
     </header>
 
-    <main class="container mx-auto">
-      <img class="text-yellow-600" src="assets/Vector.png" alt="">
+    <main class="container  mx-auto">
+      
       <section class="my-24 ">
         <!-- Thoughtful Section Start  -->
-        <div class="hero  bg-second-section py-6 lg:py-12 ">
+        <img class="mt-12 ml-6" src="assets/Vector.png" alt="">
+        <div class="hero  bg-gray-100 py-6 lg:py-12 ">
+        
           <div class="hero-content flex-1 flex-col lg:flex-row">
             <!-- <img
               src="assets/Rectangle.png" /> -->
+              
 
            <div class="flex-1  space-y-5">
              <div class=" flex justify-center md:justify-start ">
-              <button class="bg-yellow-600 text-red-700 font-bold mb-10 mt-10 px-5 py-3 rounded-3xl 
+              <button class="bg-white text-black font-bold mb-10 mt-10 px-5 py-3 rounded-3xl 
             "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block ">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
@@ -153,7 +188,7 @@
              <p>The barn house captivates with its blend of rustic charm and 
               modern sophistication, featuring weathered wood, sleek metal accents.</p>
               <!-- Image-1  -->
-            <div class="hero bg-white-400 rounded-lg p-2">
+            <div class="hero bg-white rounded-lg p-2">
             <div class="hero-content lg:flex-row">
               <img
                 src="assets/commercial.png" />
@@ -164,7 +199,7 @@
             </div>
            </div>
                 <!-- Image-2 -->
-                <div class="hero bg-white-400 rounded-lg ">
+                <div class="hero bg-white rounded-lg ">
                   <div class="hero-content lg:flex-row ">
                     <img
                       src="assets/residential.png" />
@@ -184,11 +219,13 @@
         </div>
       </section >
       <!-- Our Works Process section started-->
-   <section class="my-24 space-y-5">
+      
+   <section class="my-24 space-y-5 bg-gray-100">
    <div class="flex justify-center ">
-    <button class="bg-yellow-400 text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">How He Works <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-green-400 rounded-full -rotate-45 ml-1 ">
+    <button class="bg-white text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+       class="size-6 inline-block   ">
       <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-    </svg></button>
+    </svg>How He Works </button>
    </div>
     <div class="text-center space-y-5">
       <h1 class="text-4xl font-bold" >Our Works Process</h1>
@@ -196,12 +233,12 @@
     </div>
 
     <!-- card-1  -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
   <div class="">
     <!-- <div class="card bg-base-100  shadow-xl mt-12"> -->
-      <div class="card bg-white-100  shadow-xl mt-12 ">
+      <div class="card bg-[#E7C1D3]  shadow-xl mt-12 ">
       <figure class="w-1/5 pl-5 flex justify-start">
-        <img 
+        <img class="mt-4"
           src="assets/concept.png"
           alt="Shoes" />
       </figure>
@@ -216,9 +253,9 @@
       <!-- card-2  -->
       <div class="">
         <!-- <div class="card bg-base-100 w-96 shadow-xl mt-12"> -->
-          <div class="card bg-white-100  shadow-xl mt-12 ">
+          <div class="card bg-[#EFDA6E]  shadow-xl mt-12 ">
           <figure class="w-1/5 pl-5 flex justify-start">
-            <img 
+            <img class="mt-4"
               src="assets/flow-chart.png"
               alt="Shoes" />
           </figure>
@@ -233,9 +270,9 @@
           <!-- card-3  -->
   <div class="">
     <!-- <div class="card bg-base-100  shadow-xl mt-12"> -->
-      <div class="card bg-white-100  shadow-xl mt-12 ">
+      <div class="card bg-[#A4DAC3]  shadow-xl mt-12 ">
       <figure class="w-1/5 pl-5 flex justify-start">
-        <img 
+        <img class="mt-4"
           src="assets/vision.png"
           alt="Shoes" />
       </figure>
@@ -250,9 +287,9 @@
       <!-- card-4  -->
       <div class="">
         <!-- <div class="card bg-base-100  shadow-xl mt-12"> -->
-          <div class="card bg-white-100  shadow-xl mt-12 ">
+          <div class="card bg-[#77AAEA]  shadow-xl mt-12 ">
           <figure class="w-1/5 pl-5 flex justify-start">
-            <img 
+            <img  class="mt-4 "
               src="assets/budget-planning.png"
               alt="Shoes" />
           </figure>
@@ -269,62 +306,40 @@
  <!-- Our Works Process section ended-->
 
  <!-- Lets Discuss the next project start -->
-<section class="my-24 space-y-5">
+<section class="my-24 space-y-5  bg-[url('assets/bg.jpg')] p-12">
   <div class="">
     <!-- Header Part  -->
-    <div class="flex justify-center mb-5 ">
-      <button class="bg-yellow-400 text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">How He Works <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-green-400 rounded-full -rotate-45 ml-1 ">
+     <div class="flex  justify-center mb-6 mt-12 ">
+      <button class="bg-white text-black sm:px-12 sm:py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+        class="size-6 inline-block   ">
         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-      </svg></button>
+      </svg> How He Works </button>
      </div>
-      <div class="text-center space-y-5">
+      <div class="text-center space-y-5 mb-6">
         <h1 class="text-4xl font-bold" >Lets Discuss Next Project</h1>
-        <p>The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
-      </div>
+        <p class="">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
+      </div> 
 
-      <!-- Form Section  -->
-       <div class="mx-auto mt-16">
-        <form class="mx-auto" >
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4  ">
-           <div>
-            <label for="first name">
-              <input class="  rounded-lg" type="text" name="" id="first name" placeholder="First Name*">
-            </label>
-           </div>
-            <div>
-              <label for="last name">
-                <input class=" rounded-lg" type="text" name="" id="last name" placeholder="Last Name*">
-              </label>
-            </div>
-            <div>
-              <label for="phone number">
-                <input class=" rounded-lg" type="number" name="" id="phone number" placeholder="Phone Number*">
-              </label>
-            </div>
-            <div>
-              <label for="email">
-                <input class=" rounded-lg" type="email" name=" " id="email" placeholder="Email Number*">
-              </label>
-            </div>
-            <!-- write message -->
-            <div >
-              <label class="" for="textarea">
-                 <input class="h-32 " type="text" name="textarea" id="" placeholder="Write your message here">
-              </label>
-            </div>
-           
-            
-          </div>
-          <!-- button related  -->
-          <div class="flex justify-center mb-5 mt-12 ">
-            <button class="bg-yellow-400 text-black w-full py-3  md:px-5 md:py-3  rounded-3xl gap-2 font-bold">How He Works <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-green-400 rounded-full -rotate-45 ml-1 ">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-            </svg></button>
-           </div>
-          
-         </form>
-       </div>
-
+         <!-- copy code starts  -->
+         <div class="space-y-5 sm:space-y-4 lg:space-y-6 xl:space-y-10">
+          <!-- section head -->
+   
+          <!-- input contact information -->
+          <form class="2xl:w-3/5 2xl:mx-auto grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5 lg:grid-cols-2 lg:gap-6">
+            <input class="bg-white p-3 max-sm:px-6 sm:p-4 lg:p-4 rounded-badge text-placeholder-color row-start-1 col-start-1 col-span-1" type="text" placeholder="First Name*" required="">
+            <input class="bg-white p-3 max-sm:px-6 sm:p-4 lg:p-4 rounded-badge text-placeholder-color row-start-2 col-start-1 col-span-1 sm:row-start-1 sm:col-start-2 sm:col-span-1" type="text" placeholder="Last Name*" required="">
+            <input class="bg-white p-3 max-sm:px-6 sm:p-4 lg:p-4 rounded-badge text-placeholder-color row-start-3 col-start-1 col-span-1 sm:row-start-2 sm:col-start-1 sm:col-span-1" type="text" placeholder="Phone Number*" required="">
+            <input class="bg-white p-3 max-sm:px-6 sm:p-4 lg:p-4 rounded-badge text-placeholder-color row-start-4 col-start-1 col-span-1 sm:row-start-2 sm:col-start-2 sm:col-span-1" type="text" placeholder="E-mail Address*" required="">
+            <textarea class="bg-white max-sm:px-6 py-4 sm:p-4 lg:p-4 rounded-badge text-placeholder-color row-start-5 col-start-1 col-span-1 sm:row-start-3 sm:col-start-1 sm:col-span-2 resize-none" cols="30" rows="10" placeholder="Write your message here*" required="" spellcheck="false"></textarea>
+            <button type="submit" class="btn bg-btn-main lg:text-xl font-extrabold rounded-badge sm:px-10 row-start-6 col-start-1 col-span-1 sm:row-start-4 sm:col-start-1 sm:col-span-2">
+              Sent Mail<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline-block bg-black text-white rounded-full -rotate-45 ml-1 ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
+          </form>
+        </div>
+         <!-- copy code ends  -->
 
   </div>
 </section>
@@ -360,10 +375,6 @@
           <div class="flex justify-center">
             <li><a class="text-xl font-bold " href="#">Contact Us</a></li>
           </div>
-          <!-- <li><a class="text-xl font-bold" href="#">Services</a></li>
-          <li><a class="text-xl font-bold" href="#">Portfolio</a></li>
-          <li><a class="text-xl font-bold" href="#">Blogs</a></li>
-          <li><a class="text-xl font-bold" href="#">Contact Us</a></li> -->
 
         </ul>
        
